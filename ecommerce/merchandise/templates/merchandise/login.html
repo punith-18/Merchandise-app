@@ -1,0 +1,73 @@
+{% extends 'merchandise/main.html' %}
+{% load static %}
+{% block content%}
+
+
+<title>LOGIN HERE</title>
+
+
+
+    <div id="login-box">
+      <div class="left-box">
+         <h1>Sign Up</h1>
+         
+         <input type="text" name="username" placeholder="Username"/>
+         <input type="text" name="email" placeholder="Email"/>
+         <input type="password" name="password" placeholder="Password"/>
+
+         <input type="password" name="password2" placeholder="Confirm Password" />
+         <input type="submit" name="signup-button" value="Sign-Up"/>
+      </div> 
+
+      <div class="right-box">
+         <span class="signinwith">Sign in with <br/>Social-Network</span>
+
+         <button class="social facebook">Log in with Facebook</button>
+         <button class="social twitter">Log in with Twitter</button>
+         <button class="social google">Log in with Google+</button>
+      </div>
+      <div class="or">OR</div>
+    </div>
+    
+     
+
+
+
+
+    <div class="log">
+      <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+    </div>    <!-- Button to open the modal login form -->
+
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+ class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="#">
+    <div class="imgcontainer">
+      <img src="{% static 'images/logm.png' %}" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot<a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+{% endblock content %}

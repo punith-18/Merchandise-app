@@ -3,9 +3,9 @@
 {% block content%}
 
 <div class="row">
-  	<div class="col-lg-12"> 
+	<div class="col-lg-12"> 
 		<div class="box-element">
-			<a class="btn btn-outline-dark" href="{% url 'merchandise' %}">&#2190; Continue Shopping</a>
+			<a class="btn btn-outline-dark" href="{% url 'merchandise' %}">&#x2190; Continue Shopping</a>
 		</div>	
 		<br>
 		<br>
@@ -44,11 +44,11 @@
 				</div>
 				<div style="flex:1">&#8377 {{item.get_total}}</div>
 			</div>
-            {% endfor %}
+			{% endfor %}
 		</div>
 
 	</div>
-	
+
 </div>
-   
+
 {% endblock content%}
